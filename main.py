@@ -257,7 +257,7 @@ def generate_churn_strategy(churn_probability, input_data):
     {context}
 
     Develop a comprehensive strategy to reduce churn probability customer and Improve customer satisfaction :
-    1. Provide detailed personalized offerings and specific actionable recommendations to attract retention based on context."""
+    1. Based on quantify context provide detailed personalized offerings and specific actionable recommendations to attract retention ."""
 
     # Use Gemini Pro model
     model = genai.GenerativeModel('gemini-pro')
