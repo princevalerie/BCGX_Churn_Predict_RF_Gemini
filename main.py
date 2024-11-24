@@ -292,5 +292,5 @@ if st.button('Predict'):
             st.error(f"Error generating recommendations: {e}")
     
     # Show Input Data
-    st.write("### Input Data:")
-    st.dataframe(input_data)
+    # st.write("### Input Data:")
+    # st.dataframe(input_data)
