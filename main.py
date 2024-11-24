@@ -72,7 +72,7 @@ features = {
                                           step=0.01, 
                                           help="Margin bersih daya listrik (max: 374.64)"),
     'nb_prod_act': st.number_input('Number of Active Products', 
-                                   min_value=1.0,  # Pastikan float
+                                   min_value=0.0,  # Pastikan float
                                    max_value=float(32 * 3),  # 3x lipat
                                    value=2.0,  # Nilai default pelanggan
                                    help="Jumlah produk aktif (max: 32)"),
@@ -82,12 +82,12 @@ features = {
                                   value=678.99,  # Nilai default pelanggan
                                   help="Margin bersih (max: 24,570)"),
     'num_years_antig': st.number_input('Number of Years', 
-                                       min_value=1.0,  # Pastikan float
+                                       min_value=0.0,  # Pastikan float
                                        max_value=float(13 * 3),  # 3x lipat
                                        value=3.0,  # Nilai default pelanggan
                                        help="Jumlah tahun (max: 13)"),
     'pow_max': st.number_input('Max Power', 
-                               min_value=3.3,  # Pastikan float
+                               min_value=0.0,  # Pastikan float
                                max_value=float(320.0 * 3),  # 3x lipat
                                value=43.648,  # Nilai default pelanggan
                                step=0.1, 
@@ -165,7 +165,7 @@ features = {
                                                step=0.001, 
                                                help="Perbedaan harga variabel mid peak (max: 0.114102)"),
     'day_since_date_end': st.number_input('Days Since Date End', 
-                                          min_value=731.0, 
+                                          min_value=0.0, 
                                           max_value=float(4795 * 3),  # 3x lipat
                                           value=1096.0,  # Nilai default pelanggan
                                           help="Hari sejak tanggal berakhir (max: 4795)"),
