@@ -24,7 +24,7 @@ class ChurnPredictionApp:
     def load_model(self):
         try:
             with warnings.catch_warnings():
-                warnings.simplefilter("ignore", category=User Warning)
+                warnings.simplefilter("ignore", category=UserWarning)
                 return joblib.load("rf_classifier_model.pkl")
         except Exception as e:
             st.error(f"Failed to load model: {e}")
