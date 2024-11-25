@@ -95,11 +95,7 @@ class ChurnPredictionApp:
             Feature Ranges:
             {feature_ranges_str}
 
-            Generate a comprehensive analysis with:
-            1. Main patterns in the data
-            2. Key factors influencing churn
-            3. Strategic recommendations
-            4. In-depth business insights
+            
             """
 
             response = model.generate_content(prompt)
@@ -123,12 +119,7 @@ class ChurnPredictionApp:
             Customer Context:
             {user_context}
 
-            Generate:
-            1. Detailed risk assessment
-            2. Personalized retention strategies
-            3. Targeted intervention recommendations
-            4. Specific actions to reduce churn risk
-            5. Personalized customer engagement approaches
+            
 
             Recommendations based on user context:
             - {', '.join(recommendations)}
