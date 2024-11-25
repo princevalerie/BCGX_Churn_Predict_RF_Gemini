@@ -56,7 +56,12 @@ class ChurnPredictionApp:
     def generate_general_insights(self):
         try:
             model = genai.GenerativeModel("gemini-pro")
-            prompt = f"Provide insights on the dataset with {len(self.data_analysis['data'])} customers and a churn rate of {self.data_analysis['data']['churn'].mean()*100:.2f}%. Top features: {', '.join(self.data_analysis['top_features'])}."
+            prompt = f"Generate a comprehensive analysis with:
+            1. Main patterns in the data
+            2. Key factors influencing churn
+            3. Strategic recommendations
+            4. In-depth business insights
+            on the dataset with {len(self.data_analysis['data'])} customers and a churn rate of {self.data_analysis['data']['churn'].mean()*100:.2f}%. Top features: {', '.join(self.data_analysis['top_features'])}."
             response = model.generate_content(prompt)
             return response.text
         except Exception as e:
@@ -66,7 +71,12 @@ class ChurnPredictionApp:
         try:
             model = genai.GenerativeModel("gemini-pro")
             user_context = "\n".join([f"{k}: {v}" for k, v in features.items()])
-            prompt = f"Churn Probability: {churn_probability:.2f}%. Customer Context:\n{user_context}. Provide retention strategies and actions to reduce churn risk."
+            prompt = f"Churn Probability: {churn_probability:.2f}%. Customer Context:\n{user_context}. Generate:
+            1. Detailed risk assessment
+            2. Personalized retention strategies
+            3. Targeted intervention recommendations
+            4. Specific actions to reduce churn risk
+            5. Personalized customer engagement approaches."
             response = model.generate_content(prompt)
             return response.text
         except Exception as e:
