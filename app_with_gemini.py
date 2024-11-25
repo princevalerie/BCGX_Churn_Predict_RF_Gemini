@@ -77,7 +77,7 @@ class ChurnPredictionApp:
     def generate_general_insights(self):
         """Generate general insights from the dataset"""
         try:
-            model = genai.GenerativeModel("gemini-pro")
+            model = genai.GenerativeModel("gemini-1.5-pro")
 
             # Format feature ranges for prompt
             feature_ranges_str = "\n".join(
@@ -110,7 +110,7 @@ class ChurnPredictionApp:
     def generate_personalized_recommendations(self, features, churn_probability):
         """Generate personalized recommendations based on churn probability"""
         try:
-            model = genai.GenerativeModel("gemini-pro")
+            model = genai.GenerativeModel("gemini-1.5-pro")
 
             # Convert features into a readable string
             user_context = "\n".join([f"{k}: {v}" for k, v in features.items()])
