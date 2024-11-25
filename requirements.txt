@@ -3,8 +3,4 @@ pandas
 joblib
 python-dotenv
 google-generativeai
-<<<<<<< HEAD
-scikit-learn
-=======
-scikit-learn
->>>>>>> 5c62e4c13cecdc29ff42b7f31fa509f73024a9b5
+
