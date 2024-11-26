@@ -77,7 +77,7 @@ class ChurnPredictionApp:
     def generate_general_insights(self):
         """Generate general insights from the dataset"""
         try:
-            model = genai.GenerativeModel("gemini-1.5-flash")
+            model = genai.GenerativeModel("gemini-pro")
 
             # Format feature ranges for prompt
             feature_ranges_str = "\n".join(
@@ -95,7 +95,11 @@ class ChurnPredictionApp:
             Feature Ranges:
             {feature_ranges_str}
 
-            
+            Generate a comprehensive analysis with:
+            1. Main patterns in the data
+            2. Key factors influencing churn
+            3. Strategic recommendations
+            4. In-depth business insights
             """
 
             response = model.generate_content(prompt)
@@ -106,7 +110,7 @@ class ChurnPredictionApp:
     def generate_personalized_recommendations(self, features, churn_probability):
         """Generate personalized recommendations based on churn probability"""
         try:
-            model = genai.GenerativeModel("gemini-1.5-flash")
+            model = genai.GenerativeModel("gemini-pro")
 
             # Convert features into a readable string
             user_context = "\n".join([f"{k}: {v}" for k, v in features.items()])
@@ -119,7 +123,12 @@ class ChurnPredictionApp:
             Customer Context:
             {user_context}
 
-            
+            Generate:
+            1. Detailed risk assessment
+            2. Personalized retention strategies
+            3. Targeted intervention recommendations
+            4. Specific actions to reduce churn risk
+            5. Personalized customer engagement approaches
 
             Recommendations based on user context:
             - {', '.join(recommendations)}
