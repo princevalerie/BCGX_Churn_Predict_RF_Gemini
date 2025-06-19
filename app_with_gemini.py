@@ -110,7 +110,7 @@ class ChurnPredictionApp:
     def generate_personalized_recommendations(self, features, churn_probability):
         """Generate personalized recommendations based on churn probability"""
         try:
-            model = genai.GenerativeModel("gemini-pro")
+            model = genai.GenerativeModel("gemini-2.0-flash")
 
             # Convert features into a readable string
             user_context = "\n".join([f"{k}: {v}" for k, v in features.items()])
