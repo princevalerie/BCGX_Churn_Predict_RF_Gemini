@@ -77,7 +77,7 @@ class ChurnPredictionApp:
     def generate_general_insights(self):
         """Generate general insights from the dataset"""
         try:
-            model = genai.GenerativeModel("gemini-pro")
+            model = genai.GenerativeModel("gemini-2.0-flash")
 
             # Format feature ranges for prompt
             feature_ranges_str = "\n".join(
