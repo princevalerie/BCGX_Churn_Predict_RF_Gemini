@@ -183,7 +183,7 @@ class ChurnPredictionApp:
         st.title("🔮 Customer Churn Prediction and Retention Strategies")
 
         # Tabs for navigation
-        tab1, tab2 = st.tabs(["General Insights", "Personal Prediction"])
+        tab1, tab2 = st.tabs(["General Insights", "Churn Prediction"])
 
         with tab1:
             st.header("General Insights & Strategy for Retention")
