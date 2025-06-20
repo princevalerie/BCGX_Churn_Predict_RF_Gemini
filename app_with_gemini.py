@@ -200,7 +200,7 @@ class ChurnPredictionApp:
             #     st.metric("Top Features", "\n".join(f"- {feature}" for feature in self.data_analysis['top_features']))
 
         with tab2:
-            st.header("Personal Churn Prediction")
+            st.header("Churn Prediction")
             features = self.create_feature_inputs()
 
             if st.button('Predict Churn Risk'):
